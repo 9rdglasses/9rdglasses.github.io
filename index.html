@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>nihaomama</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      color: #000000;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    #yesBtn, #noBtn {
+      font-size: 1.5rem;
+      padding: 10px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #yesBtn {
+      background-color: #9a4703;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #ff0303;
+      color: #000000;
+    }
+
+    #response {
+      margin-top: 40px;
+      font-size: 2rem;
+      color: #e53567;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Will you be my tung tung tung sahur?🗣🧏‍♀️ </h1>
+  <div>
+    <button id="yesBtn">Yes ofc🗿</button>
+    <button id="noBtn">No  you're sucks🤢</button>
+  </div>
+  <div id="response">i know you will, who is a good boy you are!!🥺</div>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const response = document.getElementById('response');
+
+    let yesSize = 1.5;
+
+    yesBtn.onclick = () => {
+      response.style.display = 'block';
+      noBtn.style.display = 'none';
+      yesBtn.style.display = 'none';
+    };
+
+    noBtn.onclick = () => {
+      yesSize += 2.5;
+      yesBtn.style.fontSize = `${yesSize}rem`;
+    };
+  </script>
+</body>
+</html>
